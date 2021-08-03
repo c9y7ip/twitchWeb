@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Button, FormControl, InputGroup } from "react-bootstrap";
 
+//CSS import
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../style/Search.css";
+
 //Own component
 import InfoCard from "./InfoCard";
 import TwitchAPI from "./TwitchAPI";
-
-//CSS import
-import "../style/Search.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function Search(props) {
   const [streamList, setStreamList] = useState([]);

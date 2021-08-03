@@ -1,6 +1,16 @@
+.card {
+  flex-direction: row;
+  background-color: #282828;
+}
+
 .h5,
 p {
   color: white;
+}
+
+.cardImg {
+  width: 10vw;
+  height: 10vw;
 }
 
 .displayName {
@@ -11,26 +21,13 @@ p {
   color: blueviolet;
 }
 
-.infoTextData {
-  color: green;
-}
-
-.card {
-  flex-direction: row;
-  background-color: #282828;
-}
-
-.cardImg {
-  width: 10vw;
-  height: 10vw;
-}
-
 .cardButton {
   border: none;
   border-radius: 50%;
   background: none;
   cursor: pointer;
-  font-size: 2vw;
+  font-size: 1vw;
+  color: lightblue;
 }
 
 .cardText {
@@ -43,4 +40,12 @@ p {
 
 .infoText {
   margin-bottom: 0;
+}
+
+.infoTextData {
+  color: blanchedalmond;
+}
+
+table {
+  width: 40vw !important;
 }

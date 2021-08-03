@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Table } from "react-bootstrap";
 
 //Own component
 import TwitchAPI from "./TwitchAPI";
@@ -14,15 +14,10 @@ const InfoCard = ({ data = {} }) => {
     <>
       <Card className="card">
         {/* Profile pic */}
-        <Card.Img
-          variant="top"
-          className="cardImg"
-          src={data.thumbnail_url}
-          alt="Streamer image"
-        ></Card.Img>
+        <Card.Img className="cardImg" src={data.thumbnail_url} alt="Streamer image" />
         {/* Infomation */}
         <Card.Body className="cardBody">
-          <Card.Title>{data.title}</Card.Title>
+          <Card.Title>{data.title} </Card.Title>
           <Card.Text className="cardText">
             <span className="displayName">{data.display_name}</span> is playing{" "}
             <span className="gameName">{data.game_name}</span>
@@ -38,40 +33,52 @@ const InfoCard = ({ data = {} }) => {
                     setToggleButton(false);
                   }}
                 >
-                  -
+                  ▲
                 </button>
-
-                <div>
-                  <br />
-                  <p className="infoText">
-                    Boradcaster ID:{" "}
-                    <span className="infoTextData">{channelInfo.broadcaster_id}</span>
-                  </p>
-                  <p className="infoText">
-                    Boradcaster Login:{" "}
-                    <span className="infoTextData">{channelInfo.broadcaster_login}</span>
-                  </p>
-                  <p className="infoText">
-                    Boradcaster Name:{" "}
-                    <span className="infoTextData">{channelInfo.broadcaster_name}</span>
-                  </p>
-                  <p className="infoText">
-                    Boradcaster Language{" "}
-                    <span className="infoTextData">{channelInfo.broadcaster_language}</span>
-                  </p>
-                  <p className="infoText">
-                    Game ID: <span className="infoTextData">{channelInfo.game_id}</span>
-                  </p>
-                  <p className="infoText">
-                    Game Name: <span className="infoTextData">{channelInfo.game_name}</span>
-                  </p>
-                  <p className="infoText">
-                    Title: <span className="infoTextData">{channelInfo.title}</span>
-                  </p>
-                  <p className="infoText">
-                    Delay: <span className="infoTextData">{channelInfo.delay}</span>
-                  </p>
-                </div>
+                <Table striped bordered hover variant="dark" size="sm">
+                  <tbody>
+                    <tr>
+                      <td>Boradcaster ID</td>
+                      <td className="infoTextData">{channelInfo.broadcaster_id}</td>
+                    </tr>
+                    <tr>
+                      <td>Boradcaster Login</td>
+                      <td className="infoTextData">{channelInfo.broadcaster_login}</td>
+                    </tr>
+                    <tr>
+                      <td>Boradcaster Name</td>
+                      <td className="infoTextData">{channelInfo.broadcaster_name}</td>
+                    </tr>
+                    <tr>
+                      <td>Boradcaster Language</td>
+                      <td className="infoTextData">{channelInfo.broadcaster_language}</td>
+                    </tr>
+                    <tr>
+                      <td>Game ID</td>
+                      <td className="infoTextData">{channelInfo.game_id}</td>
+                    </tr>
+                    <tr>
+                      <td>Game Name</td>
+                      <td className="infoTextData">{channelInfo.game_name}</td>
+                    </tr>
+                    <tr>
+                      <td>Title</td>
+                      <td className="infoTextData">{channelInfo.title}</td>
+                    </tr>
+                    <tr>
+                      <td>Delay</td>
+                      <td className="infoTextData">{channelInfo.delay}</td>
+                    </tr>
+                    <tr>
+                      <td>Link</td>
+                      <td className="infoTextData">
+                        <a href={"https://www.twitch.tv/" + channelInfo.broadcaster_login}>
+                          WATCH NOW!
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
               </>
             ) : (
               <button
@@ -83,7 +90,7 @@ const InfoCard = ({ data = {} }) => {
                   });
                 }}
               >
-                +
+                ▼
               </button>
             )}
           </div>
