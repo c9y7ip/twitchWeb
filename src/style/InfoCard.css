@@ -1,0 +1,46 @@
+.h5,
+p {
+  color: white;
+}
+
+.displayName {
+  color: yellowgreen;
+}
+
+.gameName {
+  color: blueviolet;
+}
+
+.infoTextData {
+  color: green;
+}
+
+.card {
+  flex-direction: row;
+  background-color: #282828;
+}
+
+.cardImg {
+  width: 10vw;
+  height: 10vw;
+}
+
+.cardButton {
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+.cardText {
+  display: inline;
+}
+
+.additionInfo {
+  display: inline;
+}
+
+.infoText {
+  margin-bottom: 0;
+}

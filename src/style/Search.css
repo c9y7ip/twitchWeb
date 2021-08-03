@@ -1,0 +1,17 @@
+body {
+  background-color: #282828;
+}
+
+.input,
+.form-control,
+.input:focus,
+.form-control:focus {
+  background-color: #282828;
+  border-color: #6c757d;
+  color: white;
+}
+
+.warning {
+  text-align: center;
+  margin-top: 20vh;
+}
